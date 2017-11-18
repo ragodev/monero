@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+%:
+	dh "$@"
+
+#override_dh_auto_build:
+#	cd $(CURDIR) && rm -rf monero/; git clone https://github.com/monero-project/monero; cd $(CURDIR) && bash get_libwallet_api.sh; cd $(CURDIR) && bash build.sh
+
+override_dh_auto_configure:
+	dh_auto_configure --buildsystem=cmake -- -DBUILD_GUI_DEPS="ON"
+
+override_dh_usrlocal:
+

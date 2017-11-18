@@ -1,0 +1,4 @@
+src/wallet/wallet2_api.h usr/local/include/monero/wallet/
+obj-x86_64-linux-gnu/lib/libwallet_merged.a usr/lib/monero/
+obj-x86_64-linux-gnu/external/easylogging++/libeasylogging.a usr/lib/monero/
+obj-x86_64-linux-gnu/contrib/epee/src/libepee.a usr/lib/monero/

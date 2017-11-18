@@ -1,0 +1,18 @@
+Source: monero
+Section: devel
+Priority: extra
+Maintainer: David Mirza Ahmad <dma@subgraph.com>
+Build-Depends: debhelper (>= 9),
+               dh-systemd
+Standards-Version: 3.9.8
+Homepage: https://github.com/monero-project/
+Vcs-Git: https://github.com/monero-project/monero.git
+
+Package: monero
+Architecture: any
+Built-Using: ${misc:Built-Using}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: monero-core (= 0.11.1.0)
+Description: Monero full node p2p client 
+ Monero is a p2p cryptocurrency network that implements privacy by default. This package installs the full node client, and configures it to run as a systemd service.
+
