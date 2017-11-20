@@ -9,5 +9,8 @@
 override_dh_auto_configure:
 	dh_auto_configure --buildsystem=cmake -- -DBUILD_GUI_DEPS="ON"
 
+override_dh_auto_clean:
+	echo "dh_auto_clean"
+
 override_dh_usrlocal:
 
