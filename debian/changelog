@@ -1,3 +1,9 @@
+monero (0.11.0.0-3) UNRELEASED; urgency=low
+
+    * Update packaging, systemd unit file.
+
+ -- David Mirza Ahmad <dma@subgraph.com>  Sat, 3 Feb 2018 22:16:00 +0000
+
 monero (0.11.0.0-2) UNRELEASED; urgency=low
 
     * Update build parameters to support reproducible binaries.
