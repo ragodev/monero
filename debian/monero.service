@@ -1,17 +1,20 @@
 [Unit]
 Description=Monero Full Node
-After=network.target
+Requires=subgraph_metaproxy.service
 
 [Service]
 User=monero
 Group=monero
 WorkingDirectory=~
+RuntimeDirectory=monero
 
 Type=forking
-PIDFile=/var/run/monero/monerod.pid
-ExecStartPre=/usr/bin/install -o monero -g monero -d /var/run/monero
+PIDFile=/run/monero/monerod.pid
 ExecStart=/usr/bin/monerod --config-file /etc/monerod.conf \
-    --detach --pidfile /var/run/monero/monerod.pid
+    --detach --pidfile /run/monero/monerod.pid
+
+Restart=always
+PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
